@@ -1,0 +1,289 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background: #f4f4f4;
+    color: #333;
+}
+img{
+    position: relative;
+    width: 100%;
+}
+
+
+/* Header & Navigation */
+header {
+    background: linear-gradient(#52fa52,#4f9258,#b2e0cb); 
+    position: relative;
+    color: #fff;
+    height: 70px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 500;
+}
+header .container{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-inline: 100px;
+}
+ a {
+    text-decoration: none;
+}
+
+header ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+header a{
+    text-transform: uppercase;
+    color: white;
+}
+
+header .highlight, header .current a {
+    color: #98FB98; 
+    font-weight: bold;
+}
+
+header a:hover {
+    color: #ddd;
+    font-weight: bold;
+}
+
+/* Hero Section */
+.hero{
+    height: 80vh;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    background: url(images/nature.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: #ffffff;
+}
+
+.hero h1 {
+    font-size:70px;
+}
+
+.hero p {
+    font-size: 20px;
+}
+
+/* Main Content Sections */
+.main-content {
+    text-align: center;
+    position: relative;
+    min-height:70vh;
+}
+
+.main-content h2 {
+    color: #2E8B57;
+}
+.main-content .container p{
+    width: 70%;
+}
+.main-content .container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    padding-top: 100px;
+}
+.card-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+
+.main-content .card {
+    width: 400px;
+    background: #fff;
+    padding: 20px;
+    text-align: center;
+    border-radius: 5px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    place-content: center;
+    align-items: center;
+}
+.card img{
+    border-radius: 10px;
+    height: 300px;
+}
+
+
+/* Footer */
+footer{
+    background: linear-gradient(rgb(128, 190, 128),white);
+    display:flex;
+    padding: 40px 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+    margin-top: 20px;
+    color: #ffffff;
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+    color: #333;
+}
+.footer-top{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+}
+.footer-icons{
+    display: flex;
+    gap: 10px;
+}
+.footer-icons a{
+    position: relative;
+    width: 25px;
+    height: 25px;
+}
+
+/* About & Project Page Specifics */
+.page-title {
+    padding: 20px;
+    color: #333;
+    border-bottom: #ccc 1px solid;
+    margin: 20px;
+    text-align: center;
+    align-items: center;
+}
+
+.page-content{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.page-content .container {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+video{
+    position: relative;
+    width: 100%;
+    border-radius: 10px;
+}
+.page-content .container h2{
+    margin-top: 20px;
+}
+.page-content .container p{
+    margin-top: 20px;
+    font-size: 18px;
+}
+/* Contact Form Styles */
+.contact-form{
+    padding-block: 50px;
+    width: 50%;
+
+}
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    box-sizing: border-box; /* Good practice for layout */
+    margin-bottom: 8px;
+    cursor: pointer;
+}
+
+.contact-form button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border: 0;
+    background-color: #3CB371;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+}
+.contact-form button:hover {
+    background-color: #2E8B57;
+}
+
+/* Media Queries for Responsiveness */
+
+/* Tablets and smaller desktops */
+@media (max-width: 992px) {
+    header .container {
+        padding-inline: 40px;
+    }
+
+    .hero h1 {
+        font-size: 50px;
+    }
+
+    .main-content .container {
+        padding-top: 50px;
+    }
+
+    .card-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .main-content .card {
+        width: 80%;
+        max-width: 400px;
+    }
+
+}
+    .page-content .container {
+        width: 90%;
+    }
+
+/* Mobile devices */
+@media (max-width: 768px) {
+    header {
+        height: auto;
+        padding: 15px 0;
+    }
+
+    header .container {
+        flex-direction: column;
+        gap: 15px;
+        padding-inline: 20px;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .hero {
+        height: 60vh;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
+}
